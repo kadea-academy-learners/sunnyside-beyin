@@ -1,0 +1,262 @@
+:root {
+    --txt-white: white;
+    --txt-black: black;
+    --txt-gray: rgb(119, 117, 117);
+    --bcc-main: rgb(248, 253, 252);
+    --bcc-foot: rgb(111, 204, 181);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.menu-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 100vw;
+}
+
+.sec-bloc {
+    height: 24em;
+    background-color: var(--bcc-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90vw;
+}
+
+.sec-bloc-h2 {
+    text-align: center;
+    font-size: 2.15em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    letter-spacing: .17em;
+}
+
+.sec-bloc-info {
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    color: rgb(73, 84, 99);
+    line-height: 28px;
+    opacity: 0.85;
+}
+
+.sec-bloc-link {
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    letter-spacing: .1em;
+}
+
+#sec-bloc-link_yellow {
+    box-shadow: 0 10px 5px rgb(245, 247, 157);
+}
+
+#sec-bloc-link_pink {
+    box-shadow: 0 10px 5px pink;
+}
+
+#sec-bloc_graphic {
+    background: url(../images/image-graphic-design.jpg);
+    background-size: cover;
+}
+
+#sec-bloc_photography {
+    background: url(../images/image-photography.jpg);
+    background-size: cover;
+}
+
+.sec-bloc-graph {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.sec-graph-h2 {
+    text-align: center;
+    font-size: 2.05em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    letter-spacing: .1em;
+}
+
+.sec-graph-info {
+    text-align: center;
+    font-weight: 900;
+    font-size: 15.6px;
+    line-height: 28px;
+    opacity: 0.85;
+    width: 90%;
+    text-align: center;
+    margin: 8% 0 16%;
+}
+
+.menu-sec_client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec_client-h2 {
+    opacity: 0.45;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 1000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .2em;
+    padding: 9vh 0 5vh;
+}
+
+.sec_client-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2vh;
+}
+
+.sec_client-profile_profile {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.sec_client-info {
+    text-align: center;
+    width: 85vw;
+    font-size: 17px;
+    font-weight: 800;
+    color: rgb(36, 35, 36);
+    line-height: 28px;
+    margin: 3vh 0;
+    opacity: 0.72;
+}
+
+.profession {
+    opacity: 0.4;
+    font-weight: 700;
+    margin-bottom: 10vh;
+}
+
+.name {
+    font-weight: 1000;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.sec_produit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sec_produit_desk {
+    display: none;
+}
+
+.sec_produit_phone {
+    display: contents;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 769px) {
+    .menu-sec {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .img {
+        width: 50vw;
+        height: 75%;
+    }
+
+    .sec-bloc {
+        width: 50vw;
+    }
+
+    #bloc-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sec-bloc-info,
+    .sec-bloc-h2 {
+        text-align: start;
+        width: 70%;
+        font-size: 1em;
+    }
+
+    .sec-bloc-h2 {
+        font-size: 2.15em;
+    }
+
+    #sec-bloc_graphic,
+    #sec-bloc_photography {
+        width: 50vw;
+    }
+
+    #sec-bloc_graphic {
+        background: url(../images/desktop/image-graphic-design.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #sec-bloc_photography {
+        background: url(../images/desktop/image-photography.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sec-graph-info{
+        width: 55%;
+        margin-bottom: 10%;
+        font-weight: 600;
+    }
+
+    .sec_client-h2 {
+        letter-spacing: .7em;
+    }
+
+    .sec_client-profile {
+        width: 25vw;
+    }
+
+    .sec_client {
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        column-gap: 3%;
+        min-height: 85vh;
+    }
+
+    .sec_client-info {
+        width: 27vw;
+        margin: 15% 0;
+    }
+
+    .div-produit {
+        display: flex;
+    }
+
+    .sec_produit_phone {
+        display: none;
+    }
+    .sec_produit_desk {
+        display: contents;
+        display: flex;
+    }
+    .img-produit{
+        width: 25vw;
+    }
+}

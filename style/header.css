@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+    --txt-white: white;
+    --txt-black: black;
+    --txt-gray: rgb(119, 117, 117);
+    --bcc-main: rgb(248, 253, 252);
+    --bcc-foot: rgb(111, 204, 181);
+}
+
+body {
+    background-color: var(--bcc-main);
+}
+
+header {
+    min-height: 72vh;
+    background: url(../images/image-header.jpg), no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.head-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
+    margin: 1em 0;
+}
+
+.header-btn_menu {
+    border: none;
+    background: none;
+}
+
+.desk-head-nav,
+.phone-head-nav {
+    display: none;
+}
+
+.phone-head-nav>a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--txt-gray);
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.phone-head-nav a:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: 1000;
+}
+
+.header-btn_menu:focus+.phone-head-nav {
+    position: absolute;
+    top: 8%;
+    padding: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 90%;
+    align-items: center;
+    padding: 10px 0;
+    row-gap: 10px;
+}
+
+.head-h1 {
+    width: 90vw;
+    color: var(--txt-white);
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.25em;
+    margin: 1.5em 0;
+}
+
+[src="svg/icon-arrow-down.svg"]{
+    margin: 0.8em 0;
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        height: 85vh;
+        background-image: none;
+        background-image: url(../images/desktop/image-header.jpg);
+        background-position-y:  bottom;
+    }
+
+    .head-h1 {
+        letter-spacing: 0.28em;
+        margin: 1.8em 0;
+    }
+
+    [src="svg/icon-arrow-down.svg"]{
+        margin: 1.4em 0;
+    }
+
+    [src="svg/icon-hamburger.svg"] {
+        display: none;
+    }
+
+    .phone-head-nav{
+        display: none;
+    }
+    .desk-head-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30vw;
+    }
+
+    .desk-head-nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16x;
+        padding: 7px 12px;
+        font-weight: 700;
+    }
+
+    .desk-head-nav a:hover {
+        text-decoration: none;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+        font-weight: 700;
+    }
+    }
